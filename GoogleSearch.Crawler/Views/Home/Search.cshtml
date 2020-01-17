@@ -1,0 +1,33 @@
+﻿@{
+    ViewData["Title"] = "Search";
+}
+
+@model GoogleSearch.Crawler.Entities.SearchResult
+
+<div class="jumbotron jumbotron-fluid">
+    <h4>Keywords Search Results</h4>
+    <p>Url: <b>@Model.Url</b> </p>
+</div>
+
+<div class="text-center">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th scope="col">Keyword</th>
+                <th scope="col">Occurence</th>
+            </tr>
+        </thead>
+        <tbody>
+            @{
+                foreach (var item in Model.KeywordsValue)
+                {
+                    <tr>
+                        <td>@item.Key</td>
+                        <td>@item.Value</td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+</div>
+

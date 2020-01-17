@@ -1,0 +1,32 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model GoogleSearch.Crawler.Services.Model.SearchRequest
+
+
+<div class="row">
+    @Html.ValidationSummary()
+</div>
+
+
+<div class="row">
+
+    <div class="col-md-6">
+
+        @using (Html.BeginForm("Search", "Home", FormMethod.Post))
+        {
+            <div class="form-group">
+                <label class="control-label">@Html.DisplayNameFor(m => m.Keywords)</label>
+                @Html.TextBoxFor(m => m.Keywords, new { @class = "form-control", @placeholder = "Keywords seprated by space" })
+            </div>
+
+            <div class="form-group">
+                <label class="control-label">@Html.DisplayNameFor(m => m.Url)</label>
+                @Html.TextBoxFor(m => m.Url, new { @class = "form-control", @placeholder = "Url e.g InfoTrack.com.au" })
+            </div>
+            <div class="form-group">
+                <input type="submit" class="btn btn-primary" />
+            </div>
+        }
+    </div>
+</div>
