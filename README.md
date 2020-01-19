@@ -37,7 +37,7 @@
 
 1. Open the solution file in visual studio 2017 or above 
 2. Make sure the starting project is set to `GoogleSearch.Crawler`
-3. Run it by clink on IIS Express
+3. Within Visual studio, run it using IIS Express option in the top toolbar
 4. When it is load, it should show the below screen
 
 
