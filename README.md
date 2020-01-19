@@ -4,7 +4,7 @@
 ### Google Search Project Structure 
 1. This solution is implemented using .Net Core version 2.1 and runs as a MVC application
 
-2.  The root directory contains README file. solution file and projects folder  
+2.  The root directory contains README file, solution file and projects folders  
 
 4. In order to be scalable and maintainable, the Search Crawler application divided into the following projects.
 --- 
@@ -35,16 +35,17 @@
 
 #### How to run the project 
 
-1. Open the solution in visual studio 2017 or above 
+1. Open the solution file in visual studio 2017 or above 
 2. Make sure the starting project is set to `GoogleSearch.Crawler`
-3. Run it by using IIS Express
+3. Run it by clink on IIS Express
+4. When it is load, it should show the below screen
 
 
-<b>Example screen When program loads</b>
+<b>Example screen when program loads</b>
 
 ![File](./Images/file.PNG )
 
-<b> Key in few Keywords and url </b>
+<b> Key-in few Keywords and url </b>
 
 ![File2](./Images/File2.png)
 
@@ -52,6 +53,6 @@
 
 ![File3](./Images/File3.PNG)
 
-<b> Unit tests result </b>
+<b> Tests result </b>
 
 ![File4](./Images/File4.PNG)
