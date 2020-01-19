@@ -46,7 +46,7 @@
 
 <b> Key in few Keywords and url </b>
 
-![File2](./Images/File2.PNG)
+![File2](./Images/File2.png)
 
 <b> Search Result </b>
 
