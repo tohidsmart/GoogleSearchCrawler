@@ -9,7 +9,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GoogleSearch.Crawler.Entiti
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GoogleSearch.Crawler.Services", "GoogleSearch.Crawler.Services\GoogleSearch.Crawler.Services.csproj", "{5794998B-DE43-4D0F-846D-99F64CC92A1D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoogleSearch.Crawler.Test", "GoogleSearch.Crawler.Test\GoogleSearch.Crawler.Test.csproj", "{13FD97F6-91D9-41FF-A940-1CA7081AB004}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GoogleSearch.Crawler.Test", "GoogleSearch.Crawler.Test\GoogleSearch.Crawler.Test.csproj", "{13FD97F6-91D9-41FF-A940-1CA7081AB004}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B0235966-9A17-4A44-8B17-2B63BD1C746F}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,5 +1,4 @@
 ﻿using GoogleSearch.Crawler.Entities;
-using GoogleSearch.Crawler.Services.Common;
 using MediatR;
 using System;
 using System.Collections.Generic;
@@ -15,7 +14,6 @@ namespace GoogleSearch.Crawler.Services.Model
         private List<string> keywordsList;
 
         public string NextPage { get; set; }
-        public string PreviousPage { get; set; }
         public List<string> KeyWordsList
         {
             get

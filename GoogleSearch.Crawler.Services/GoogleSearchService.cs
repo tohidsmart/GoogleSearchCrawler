@@ -16,6 +16,11 @@ namespace GoogleSearch.Crawler.Services
             this.httpClient = httpClient;
         }
 
+        /// <summary>
+        /// This method scraps the content from Google based on Search Request parameter
+        /// </summary>
+        /// <param name="request"></param>
+        /// <returns></returns>
         public async Task<string> SearchAsync(SearchRequest request)
         {
             if (string.IsNullOrEmpty(request.Keywords))

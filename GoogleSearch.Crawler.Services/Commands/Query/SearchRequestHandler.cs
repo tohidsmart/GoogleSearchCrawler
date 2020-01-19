@@ -2,9 +2,7 @@
 using GoogleSearch.Crawler.Services.Interfaces;
 using GoogleSearch.Crawler.Services.Model;
 using MediatR;
-using Newtonsoft.Json;
 using System.Collections.Generic;
-using System.IO;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -23,6 +21,14 @@ namespace GoogleSearch.Crawler.Services.Commands.Query
             this.searchParser = searchParser;
         }
 
+        /// <summary>
+        /// Request handler is the engine of the application. It accepts a request object
+        /// as a mediator, execute the logic and returns the aggregated result
+        /// Logic is based on the number of search result e.g. 100
+        /// </summary>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
         public async Task<SearchResult> Handle(SearchRequest request, CancellationToken cancellationToken)
         {
             SearchPageResponse searchPageResponse;

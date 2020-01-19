@@ -1,18 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
+﻿using System.Diagnostics;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
-using GoogleSearch.Crawler.Models;
 using MediatR;
-using System.Threading;
-using System.Net.Http;
-using HtmlAgilityPack;
-using System.Linq;
 using GoogleSearch.Crawler.Services.Model;
 using GoogleSearch.Crawler.Entities;
-using System.Buffers;
 using System.IO;
 using System.Text;
 
@@ -21,20 +12,29 @@ namespace GoogleSearch.Crawler.Controllers
 
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> logger;
+
         private readonly IMediator mediator;
 
-        public HomeController(ILogger<HomeController> logger, IMediator mediator)
+        public HomeController(IMediator mediator)
         {
-            this.logger = logger;
             this.mediator = mediator;
         }
 
+
+        /// <summary>
+        /// This Action show the default search page
+        /// </summary>
+        /// <returns></returns>
         public IActionResult Index()
         {
             return View();
         }
 
+        /// <summary>
+        /// THis Action passes the Search request to search handler and displays the result
+        /// </summary>
+        /// <param name="request"></param>
+        /// <returns></returns>
         public async Task<IActionResult> Search(SearchRequest request)
         {
             if (!TryValidateModel(request))
@@ -47,7 +47,7 @@ namespace GoogleSearch.Crawler.Controllers
 
 
 
-       
+
         public async Task<IActionResult> Error()
         {
 

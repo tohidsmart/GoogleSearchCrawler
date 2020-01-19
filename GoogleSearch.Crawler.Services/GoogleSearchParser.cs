@@ -9,8 +9,19 @@ using System.Text;
 
 namespace GoogleSearch.Crawler.Services
 {
+    /// <summary>
+    /// This class is responsible to Parse the search result based on Xpath
+    /// Aggregate the keyword appearance result based on the search result 
+    /// </summary>
     public class GoogleSearchParser : ISearchParser
     {
+
+        /// <summary>
+        /// This method Count the keywords occurence in search  and return the aggregated result 
+        /// </summary>
+        /// <param name="request"></param>
+        /// <param name="googleResult"></param>
+        /// <returns></returns>
         public Dictionary<string, int> AggregateResult(SearchRequest request, List<GoogleSearchResult> googleResult)
         {
 
@@ -34,6 +45,11 @@ namespace GoogleSearch.Crawler.Services
             return aggregatedResult;
         }
 
+        /// <summary>
+        /// This method transforms the downloaed html into custom object and remvoe unwanted content
+        /// </summary>
+        /// <param name="rawHtml"></param>
+        /// <returns></returns>
         public SearchPageResponse TransformSearchResult(string rawHtml)
         {
             string allResultXPath = ".//div[@id='main']/div";
@@ -51,6 +67,12 @@ namespace GoogleSearch.Crawler.Services
             return searchResponse;
         }
 
+        /// <summary>
+        /// This method extracts the Url and description text from htmlNode using Xpath
+        /// </summary>
+        /// <param name="htmlNodes"></param>
+        /// <param name="count"></param>
+        /// <returns></returns>
         public List<GoogleSearchResult> GetSearchResult(HtmlNodeCollection htmlNodes, int count)
         {
             List<GoogleSearchResult> googleSearchResults = new List<GoogleSearchResult>();
@@ -67,6 +89,7 @@ namespace GoogleSearch.Crawler.Services
             }
             return googleSearchResults;
         }
+
 
         private bool IsKeywordOccured(string keyword, string text, string textUrl, string requestUrl)
         {
